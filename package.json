@@ -1,11 +1,11 @@
 {
-  "name": "roadtothirdstage-coder",
+  "name": "roadothirdstage-coder",
   "version": "0.0.0",
-  "description": "",
+  "description": "Welcome to the development of the final project on the backend with Node.js from Coderhouse. Towards the third delivery, a greater use of OOP will be implemented to enhance its scalability. Additionally, we will aim for an improved use of Git with the assistance of tools such as the Conventional Commits extension and the conventional-changelog dependency.",
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "log": "conventional-changelog -i CHANGELOG.md -s -r 0"
   },
   "keywords": [],
   "author": "",
