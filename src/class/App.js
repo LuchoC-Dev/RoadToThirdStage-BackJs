@@ -3,8 +3,8 @@ class App {
   constructor() {}
 
   async init() {
-    expressInit();
-    middlewaresInit();
+    this.expressInit();
+    this.middlewaresInit();
   }
 
   expressInit() {
