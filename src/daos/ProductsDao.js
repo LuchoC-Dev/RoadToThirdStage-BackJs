@@ -5,6 +5,10 @@ class ProductsDao extends Dao {
   constructor() {
     super(productsModel);
   }
+
+  async getAll() {
+    return await this.read({});
+  }
 }
 
 const productsDao = new ProductsDao();
