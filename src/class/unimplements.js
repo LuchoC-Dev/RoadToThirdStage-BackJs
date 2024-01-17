@@ -1,5 +1,5 @@
 function unimplements(value) {
-  return `Unimplements method: ${value}`;
+  console.error(`Unimplements method: ${value}`);
 }
 
 export default unimplements;
