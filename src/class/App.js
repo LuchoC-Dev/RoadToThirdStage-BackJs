@@ -1,4 +1,5 @@
 import express from 'express';
+import apiProductsRouter from '../routes/api/products/products.routes.js';
 class App {
   constructor() {}
 
@@ -18,7 +19,9 @@ class App {
     this.app.use(express.urlencoded({ extended: true }));
   }
 
-  routerInit() {}
+  routerInit() {
+    this.app.use('/', apiProductsRouter);
+  }
 }
 
 export default App;
