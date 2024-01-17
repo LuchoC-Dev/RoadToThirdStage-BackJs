@@ -5,6 +5,7 @@ class App {
   async init() {
     this.expressInit();
     this.middlewaresInit();
+    this.routerInit();
   }
 
   expressInit() {
@@ -16,6 +17,8 @@ class App {
     this.app.use(express.json());
     this.app.use(express.urlencoded({ extended: true }));
   }
+
+  routerInit() {}
 }
 
 export default App;
