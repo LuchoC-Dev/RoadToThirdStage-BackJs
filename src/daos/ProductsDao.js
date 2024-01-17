@@ -1,5 +1,6 @@
-import productsModel from '../models/productsModel';
-import Dao from './Dao';
+import unimplements from '../class/unimplements.js';
+import productsModel from '../models/productsModel.js';
+import Dao from './Dao.js';
 
 class ProductsDao extends Dao {
   constructor() {
@@ -12,6 +13,10 @@ class ProductsDao extends Dao {
 
   async getById(id) {
     return await this.readOne({ _id: id });
+  }
+
+  async getByConditions(limit, page, sort, query) {
+    unimplements('getByConditions');
   }
 }
 
