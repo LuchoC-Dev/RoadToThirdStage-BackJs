@@ -1,5 +1,6 @@
 import express from 'express';
 import apiProductsRouter from '../routes/api/products/products.routes.js';
+import MongoDb from './MongoDb.js';
 class App {
   constructor() {}
 
@@ -7,6 +8,7 @@ class App {
     this.expressInit();
     this.middlewaresInit();
     this.routerInit();
+    await this.databaseInit();
   }
 
   expressInit() {
@@ -21,6 +23,10 @@ class App {
 
   routerInit() {
     this.app.use('/', apiProductsRouter);
+  }
+
+  async databaseInit() {
+    await MongoDb.init();
   }
 }
 
