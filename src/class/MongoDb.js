@@ -7,7 +7,8 @@ class MongoDb {
       await mongoose.connect(DB_URL);
       console.log('Successful connection with Database');
     } catch (error) {
-      console.error(`Error connecting to the Database\n${error}`);
+      console.error(`Error connecting to the Database:\n    ${error}`);
+      throw new Error(error);
     }
   }
 }

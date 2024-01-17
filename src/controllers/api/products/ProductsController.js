@@ -1,4 +1,4 @@
-import unimplements from '../../../class/unimplements';
+import unimplements from '../../../class/unimplements.js';
 
 class ProductsController {
   static runGetAll(req, res) {

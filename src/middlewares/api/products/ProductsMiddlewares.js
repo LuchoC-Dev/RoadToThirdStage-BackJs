@@ -1,4 +1,4 @@
-import unimplements from '../../../class/unimplements';
+import unimplements from '../../../class/unimplements.js';
 
 class ProductsMdw {
   static checkParams(req, res, next) {
