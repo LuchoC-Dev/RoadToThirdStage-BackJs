@@ -7,6 +7,10 @@ const path = '/api/products/';
 
 router.get(path, endpoint.runGetAll);
 router.get(path + ':id', mdw.checkParams, mdw.checkQuery, endpoint.get);
+router.post(path + ':id', endpoint.post);
+router.put(path + ':id', endpoint.put);
+router.delete(path, endpoint.removeAll);
+router.delete(path + ':id', endpoint.remove);
 
 //test
 router.delete(path, (req, res) => {
