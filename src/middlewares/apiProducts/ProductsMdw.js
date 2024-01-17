@@ -1,6 +1,6 @@
 class ProductsMdw {
   static checkGet(req, res, next) {
-    checkP(req, res, next);
+    checkGet(req, res, next);
   }
   static checkPost(req, res, next) {
     checkPost(req, res, next);
