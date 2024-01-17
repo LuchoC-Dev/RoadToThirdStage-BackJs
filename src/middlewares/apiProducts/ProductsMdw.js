@@ -1,3 +1,8 @@
+import checkDelete from './crud/checkDelete.js';
+import checkGet from './crud/checkGet.js';
+import checkPost from './crud/checkPost.js';
+import checkPut from './crud/checkPut.js';
+
 class ProductsMdw {
   static checkGet(req, res, next) {
     checkGet(req, res, next);
