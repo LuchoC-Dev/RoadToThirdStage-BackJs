@@ -1,4 +1,5 @@
 import { Router } from 'express';
+import ProductsMdw from '../../../middlewares/api/products/ProductsMdw.js';
 
 const router = Router();
 const path = '/api/products/';
