@@ -18,6 +18,10 @@ class ProductsDao extends Dao {
   async getByConditions(limit, page, sort, query) {
     unimplements('getByConditions');
   }
+
+  async updateOneById(id, updates) {
+    return await this.updateOne({ _id: id }, updates);
+  }
 }
 
 const productsDao = new ProductsDao();

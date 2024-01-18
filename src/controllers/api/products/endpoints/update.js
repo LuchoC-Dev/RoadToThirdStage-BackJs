@@ -1,10 +1,13 @@
+import Parser from '../../../../class/Parser.js';
 import Response from '../../../../class/Response.js';
+import unimplements from '../../../../class/unimplements.js';
 import productsDao from '../../../../daos/ProductsDao.js';
 
 async function update(req, res) {
   try {
-    unimplements('update');
-    const result = await productsDao.updateOne();
+    const { id } = req.params;
+    const updates = Parser.productsData(req.body);
+    const result = await productsDao.updateOneById(id, updates);
     res.status(200).json(Response.ok(result));
   } catch (error) {
     console.error(error);
