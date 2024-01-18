@@ -1,7 +1,6 @@
 class Parser {
-  static productsData(req) {
-    const { title, description, price, thumbnail, code, stock, status, category } = req.body;
-
+  static productsData(body) {
+    const { title, description, price, thumbnail, code, stock, status, category } = body;
     return {
       title: title,
       description: description,

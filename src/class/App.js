@@ -1,19 +1,22 @@
 import express from 'express';
 import apiProductsRouter from '../routes/api/products/products.routes.js';
 import MongoDb from './MongoDb.js';
+import { APP_URL, PORT } from '../utils/env.js';
 class App {
   constructor() {}
 
   async init() {
     this.expressInit();
     this.middlewaresInit();
-    this.routerInit();
     await this.databaseInit();
+    this.routerInit();
   }
 
   expressInit() {
     this.app = express();
-    this.appListen = this.app.listen(() => console.log(`Express server started successfully`));
+    this.appListen = this.app.listen(PORT, () => {
+      console.log(`Express server started successfully\n${APP_URL}`);
+    });
   }
 
   middlewaresInit() {
@@ -30,4 +33,6 @@ class App {
   }
 }
 
-export default App;
+const app = new App();
+
+export default app;

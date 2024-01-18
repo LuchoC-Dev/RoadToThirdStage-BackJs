@@ -5,7 +5,7 @@ import productsDao from '../../../../daos/ProductsDao.js';
 
 async function create(req, res) {
   try {
-    const { product } = Parser.productsData(req.body);
+    const product = Parser.productsData(req.body);
     const result = await productsDao.create(product);
     res.status(200).json(Response.ok(result));
   } catch (error) {
