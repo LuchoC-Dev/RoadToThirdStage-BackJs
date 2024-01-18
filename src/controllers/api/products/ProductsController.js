@@ -1,7 +1,7 @@
 import unimplements from '../../../class/unimplements.js';
 import create from './endpoints/create.js';
-import remove from './endpoints/delete.js';
-import removeAll from './endpoints/deleteAll.js';
+import remove from './endpoints/remove.js';
+import removeAll from './endpoints/removeAll.js';
 import getAll from './endpoints/getAll.js';
 import getByConditions from './endpoints/getByConditions.js';
 import getById from './endpoints/getById.js';
@@ -29,7 +29,7 @@ class ProductsController {
     update(req, res);
   }
 
-  static removeAll(req, res) {
+  static runRemoveAll(req, res) {
     removeAll(req, res);
   }
 
