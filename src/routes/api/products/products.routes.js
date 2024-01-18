@@ -9,7 +9,7 @@ router.get(path, endpoint.runGetAll);
 router.get(path + ':id', endpoint.get);
 router.post(path + ':id', endpoint.post);
 router.put(path + ':id', endpoint.put);
-router.delete(path, endpoint.removeAll);
+router.delete(path, endpoint.runRemoveAll);
 router.delete(path + ':id', endpoint.remove);
 
 //test

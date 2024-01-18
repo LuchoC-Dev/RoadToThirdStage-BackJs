@@ -2,7 +2,17 @@ import { Model } from 'mongoose';
 
 class Dao {
   constructor(model) {
-    if (!(model instanceof Model)) {
+    const testModel = new model({
+      title: 'title',
+      description: 'description',
+      price: 5,
+      thumbnail: ['thumbnail.jgp'],
+      code: '12341Ads',
+      stock: 5,
+      status: true,
+      category: 'category',
+    });
+    if (!(testModel instanceof Model)) {
       throw new Error('Dao expect a Model value');
     }
     this.model = model;
