@@ -22,6 +22,10 @@ class ProductsDao extends Dao {
   async updateOneById(id, updates) {
     return await this.updateOne({ _id: id }, updates);
   }
+
+  async removeById(id) {
+    return await this.model.findByIdAndDelete(id);
+  }
 }
 
 const productsDao = new ProductsDao();

@@ -4,8 +4,8 @@ import productsDao from '../../../../daos/ProductsDao.js';
 
 async function remove(req, res) {
   try {
-    unimplements('remove');
-    const result = await productsDao.deleteOne();
+    const { id } = req.params;
+    const result = await productsDao.removeById(id);
     res.status(200).json(Response.ok(result));
   } catch (error) {
     console.error(error);
