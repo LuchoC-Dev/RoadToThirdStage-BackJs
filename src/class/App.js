@@ -33,6 +33,6 @@ class App {
   }
 }
 
-const app = new App();
+const application = new App();
 
-export default app;
+export default application;
