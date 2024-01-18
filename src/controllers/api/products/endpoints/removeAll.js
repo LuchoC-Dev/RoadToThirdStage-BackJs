@@ -4,7 +4,10 @@ import productsDao from '../../../../daos/ProductsDao.js';
 
 async function removeAll(req, res) {
   try {
-    unimplements('removeAll');
+    const { clear } = req.query;
+    if (clear !== 'true') {
+      throw new Error('Invalid key');
+    }
     const result = await productsDao.delete({});
     res.status(200).json(Response.ok(result));
   } catch (error) {
