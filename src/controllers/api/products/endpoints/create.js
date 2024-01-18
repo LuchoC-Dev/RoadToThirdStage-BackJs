@@ -4,7 +4,7 @@ import productsDao from '../../../../daos/ProductsDao.js';
 
 async function create(req, res) {
   try {
-    unimplements('create');
+    const { products } = Parse;
     const result = await productsDao.create();
     res.status(200).json(Response.ok(result));
   } catch (error) {
