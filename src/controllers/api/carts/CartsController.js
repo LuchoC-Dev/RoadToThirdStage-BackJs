@@ -1,6 +1,9 @@
 import create from './endpoints/create';
 import getAll from './endpoints/getAll';
 import getById from './endpoints/getById';
+import remove from './endpoints/remove';
+import removeAll from './endpoints/removeAll';
+import update from './endpoints/update';
 
 class CartsController {
   static get(req, res) {
@@ -15,11 +18,17 @@ class CartsController {
     create(req, res);
   }
 
-  static putById(req, res) {}
+  static putById(req, res) {
+    update(req, res);
+  }
 
-  static delete(req, res) {}
+  static delete(req, res) {
+    removeAll(req, res);
+  }
 
-  static deleteById(req, res) {}
+  static deleteById(req, res) {
+    remove(req, res);
+  }
 }
 
 export default CartsController;

@@ -5,7 +5,7 @@ import Dao from '../../../../daos/CartsDao.js';
 async function remove(req, res) {
   try {
     const { id } = req.params;
-    const result = await Dao.removeById(id);
+    const result = await Dao.updateOneById(id, { products: [] });
     res.status(200).json(Response.ok(result));
   } catch (error) {
     console.error(error);
