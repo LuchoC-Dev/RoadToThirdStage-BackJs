@@ -1,5 +1,6 @@
 import express from 'express';
-import apiProductsRouter from '../routes/api/products/products.routes.js';
+import apiProductsRouter from '../routes/api/products.routes.js';
+import apiCartsRouter from '../routes/api/carts.routes.js';
 import MongoDb from './MongoDb.js';
 import { APP_URL, PORT } from '../utils/env.js';
 class App {
@@ -26,6 +27,7 @@ class App {
 
   routerInit() {
     this.app.use('/', apiProductsRouter);
+    this.app.use('/', apiCartsRouter);
   }
 
   async databaseInit() {

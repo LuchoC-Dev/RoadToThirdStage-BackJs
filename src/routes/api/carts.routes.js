@@ -1,0 +1,20 @@
+import { Router } from 'express';
+import endpoint from '../../controllers/api/carts/CartsController.js';
+import mdw from '../../middlewares/api/carts/CartMiddlewares.js';
+
+const router = Router();
+const path = '/api/carts/';
+
+router.get(path, endpoint.get);
+router.get(path + ':id', endpoint.getById);
+router.post(path, endpoint.post);
+router.post(path + ':id', endpoint.postById);
+router.put(path + ':id', endpoint.putById);
+router.delete(path, endpoint.runRemoveAll);
+router.delete(path + ':id', endpoint.remove);
+
+// Mover a otra carpeta de products
+// router.put(path + ':id/products/:prodId', endpoint.putById);
+// router.delete(path + ':id/products/:prodId', endpoint.removeById);
+
+export default router;
