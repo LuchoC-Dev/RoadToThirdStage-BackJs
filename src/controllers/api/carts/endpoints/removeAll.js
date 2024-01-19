@@ -1,6 +1,6 @@
 import Response from '../../../../class/Response.js';
 import unimplements from '../../../../class/unimplements.js';
-import productsDao from '../../../../daos/ProductsDao.js';
+import Dao from '../../../../daos/CartsDao.js';
 
 async function removeAll(req, res) {
   try {
@@ -8,7 +8,7 @@ async function removeAll(req, res) {
     if (clear !== 'true') {
       throw new Error('Invalid key');
     }
-    const result = await productsDao.delete({});
+    const result = await Dao.delete({});
     res.status(200).json(Response.ok(result));
   } catch (error) {
     console.error(error);
