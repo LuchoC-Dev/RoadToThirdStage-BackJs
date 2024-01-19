@@ -8,11 +8,11 @@ import getById from './endpoints/getById.js';
 import update from './endpoints/update.js';
 
 class ProductsController {
-  static runGetAll(req, res) {
+  static get(req, res) {
     getAll(req, res);
   }
 
-  static get(req, res) {
+  static getById(req, res) {
     const { id } = req.params;
     if (id) {
       getById(req, res);
@@ -25,15 +25,15 @@ class ProductsController {
     create(req, res);
   }
 
-  static put(req, res) {
+  static putById(req, res) {
     update(req, res);
   }
 
-  static runRemoveAll(req, res) {
+  static delete(req, res) {
     removeAll(req, res);
   }
 
-  static remove(req, res) {
+  static deleteById(req, res) {
     remove(req, res);
   }
 }

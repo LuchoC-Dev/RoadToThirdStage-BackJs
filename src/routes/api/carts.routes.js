@@ -10,8 +10,8 @@ router.get(path + ':id', endpoint.getById);
 router.post(path, endpoint.post);
 router.post(path + ':id', endpoint.postById);
 router.put(path + ':id', endpoint.putById);
-router.delete(path, endpoint.runRemoveAll);
-router.delete(path + ':id', endpoint.remove);
+router.delete(path, endpoint.delete);
+router.delete(path + ':id', endpoint.deleteById);
 
 // Mover a otra carpeta de products
 // router.put(path + ':id/products/:prodId', endpoint.putById);
