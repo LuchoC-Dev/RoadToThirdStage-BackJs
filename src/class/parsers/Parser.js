@@ -12,6 +12,13 @@ class Parser {
       category: category,
     };
   }
+
+  static cartsData(body) {
+    const { products } = body;
+    return {
+      products: products,
+    };
+  }
 }
 
 export default Parser;
