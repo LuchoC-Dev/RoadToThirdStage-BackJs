@@ -1,4 +1,4 @@
-import Parser from '../../../../class/Parser.js';
+import Parser from '../../../../class/parsers/Parser.js';
 import Response from '../../../../class/Response.js';
 import unimplements from '../../../../class/unimplements.js';
 import productsDao from '../../../../daos/ProductsDao.js';
