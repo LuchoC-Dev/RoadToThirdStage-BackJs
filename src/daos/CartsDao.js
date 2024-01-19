@@ -9,6 +9,10 @@ class CartsDao extends Dao {
   async getAll() {
     return await this.read({});
   }
+
+  async getById(id) {
+    return await this.readOne({ _id: id });
+  }
 }
 
 export default CartsDao;
