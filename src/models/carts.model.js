@@ -13,6 +13,6 @@ const schema = new Schema({
   },
 });
 
-const cartModel = model('carts', schema);
+const cartsModel = model('carts', schema);
 
-export default cartModel;
+export default cartsModel;
