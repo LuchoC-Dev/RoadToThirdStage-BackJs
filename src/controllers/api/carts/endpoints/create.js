@@ -5,8 +5,7 @@ import Dao from '../../../../daos/CartsDao.js';
 
 async function create(req, res) {
   try {
-    const cart = Parser.cartsData(req.body);
-    const result = await Dao.create(cart);
+    const result = await Dao.create({});
     res.status(200).json(Response.ok(result));
   } catch (error) {
     console.error(error);
