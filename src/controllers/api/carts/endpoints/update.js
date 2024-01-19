@@ -6,8 +6,8 @@ import Dao from '../../../../daos/CartsDao.js';
 async function update(req, res) {
   try {
     const { id } = req.params;
-    const updates = Parser.cartsData(req.body);
-    const result = await Dao.updateOneById(id, updates);
+    const { products } = Parser.cartsData(req.body);
+    const result = await Dao.updateOneById(id, { products: products });
     res.status(200).json(Response.ok(result));
   } catch (error) {
     console.error(error);
