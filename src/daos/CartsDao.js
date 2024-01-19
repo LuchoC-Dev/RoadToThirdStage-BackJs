@@ -23,4 +23,6 @@ class CartsDao extends Dao {
   }
 }
 
-export default CartsDao;
+const cartsDao = new CartsDao();
+
+export default cartsDao;

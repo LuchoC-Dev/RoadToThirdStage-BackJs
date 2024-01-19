@@ -1,9 +1,9 @@
-import create from './endpoints/create';
-import getAll from './endpoints/getAll';
-import getById from './endpoints/getById';
-import remove from './endpoints/remove';
-import removeAll from './endpoints/removeAll';
-import update from './endpoints/update';
+import create from './endpoints/create.js';
+import getAll from './endpoints/getAll.js';
+import getById from './endpoints/getById.js';
+import removeProducts from './endpoints/removeProducts.js';
+import removeAll from './endpoints/removeAll.js';
+import update from './endpoints/update.js';
 
 class CartsController {
   static get(req, res) {
@@ -27,7 +27,7 @@ class CartsController {
   }
 
   static deleteById(req, res) {
-    remove(req, res);
+    removeProducts(req, res);
   }
 }
 
