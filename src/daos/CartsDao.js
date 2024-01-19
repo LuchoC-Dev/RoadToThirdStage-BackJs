@@ -13,6 +13,10 @@ class CartsDao extends Dao {
   async getById(id) {
     return await this.readOne({ _id: id });
   }
+
+  async removeById(id) {
+    return await this.model.findByIdAndDelete(id);
+  }
 }
 
 export default CartsDao;
