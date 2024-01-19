@@ -17,6 +17,10 @@ class CartsDao extends Dao {
   async removeById(id) {
     return await this.model.findByIdAndDelete(id);
   }
+
+  async updateOneById(id, updates) {
+    return await this.updateOne({ _id: id }, updates);
+  }
 }
 
 export default CartsDao;
