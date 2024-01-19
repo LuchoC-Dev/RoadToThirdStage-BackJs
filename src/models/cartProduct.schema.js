@@ -8,6 +8,7 @@ const schema = new Schema({
   quantity: {
     type: Number,
     index: false,
+    default: 1,
   },
 });
 
