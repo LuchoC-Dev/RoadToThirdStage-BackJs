@@ -1,5 +1,5 @@
 import unimplements from '../class/unimplements.js';
-import productsModel from '../models/productsModel.js';
+import productsModel from '../models/products.model.js';
 import Dao from './Dao.js';
 
 class ProductsDao extends Dao {
