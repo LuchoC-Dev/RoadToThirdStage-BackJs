@@ -1,10 +1,11 @@
 import { Schema, model } from 'mongoose';
+import cartProductSchema from './cartProduct';
 
 const schema = new Schema({
   products: {
     type: [
       {
-        type: {},
+        type: cartProductSchema,
       },
     ],
     default: [],
