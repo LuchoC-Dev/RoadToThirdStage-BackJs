@@ -1,6 +1,6 @@
 import { Router } from 'express';
-import endpoint from '../../controllers/api/carts/CartsController.js';
-import mdw from '../../middlewares/api/carts/CartMiddlewares.js';
+import endpoint from '../../../controllers/api/carts/CartsController.js';
+import mdw from '../../../middlewares/api/carts/CartMiddlewares.js';
 
 const router = Router();
 const path = '/api/carts/';
