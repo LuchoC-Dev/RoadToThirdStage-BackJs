@@ -30,4 +30,4 @@ class ProductsDao extends Dao {
 
 const productsDao = new ProductsDao();
 
-export default productsDao;
+export { ProductsDao, productsDao };

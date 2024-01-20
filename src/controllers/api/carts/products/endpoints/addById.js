@@ -1,5 +1,5 @@
 import Response from '../../../../class/Response.js';
-import Dao from '../../../../../daos/CartsDao.js';
+import { cartsProductsDao as Dao } from '../../../../../daos/CartsProductsDao.js';
 
 async function addById(req, res) {
   try {

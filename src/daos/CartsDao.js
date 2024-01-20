@@ -25,4 +25,4 @@ class CartsDao extends Dao {
 
 const cartsDao = new CartsDao();
 
-export default cartsDao;
+export { CartsDao, cartsDao };

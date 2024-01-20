@@ -1,6 +1,6 @@
 import Response from '../../../../class/Response.js';
 import unimplements from '../../../../class/unimplements.js';
-import Dao from '../../../../daos/ProductsDao.js';
+import { productsDao as Dao } from '../../../../daos/ProductsDao.js';
 
 async function remove(req, res) {
   try {

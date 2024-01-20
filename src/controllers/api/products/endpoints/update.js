@@ -1,7 +1,7 @@
 import Parser from '../../../../class/parsers/Parser.js';
 import Response from '../../../../class/Response.js';
 import unimplements from '../../../../class/unimplements.js';
-import Dao from '../../../../daos/ProductsDao.js';
+import { productsDao as Dao } from '../../../../daos/ProductsDao.js';
 
 async function update(req, res) {
   try {

@@ -1,5 +1,5 @@
 import Response from '../../../../class/Response.js';
-import Dao from '../../../../daos/ProductsDao.js';
+import { productsDao as Dao } from '../../../../daos/ProductsDao.js';
 
 async function getByConditions(req, res) {
   try {
