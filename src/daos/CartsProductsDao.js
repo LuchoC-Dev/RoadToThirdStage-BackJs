@@ -5,14 +5,14 @@ class CartsProductsDao extends CartsDao {
     super();
   }
 
-  async setQuantityById(id, prodId, quantity) {
+  async addById(id, prodId) {
     const cart = await this.getById(id);
     const product = this.getProduct(cart, prodId);
     if (!product) {
-      return await this.updateOneById(id, { $push: { products: { product: prodId, quantity: quantity } } });
+      return await this.updateOneById(id, { $push: { products: { product: prodId, quantity: 1 } } });
     }
 
-    product.quantity = quantity;
+    product.quantity++;
     await cart.save();
     return cart;
   }
@@ -25,6 +25,18 @@ class CartsProductsDao extends CartsDao {
     });
     console.log(log);
     return log;
+  }
+
+  async setQuantityById(id, prodId, quantity) {
+    const cart = await this.getById(id);
+    const product = this.getProduct(cart, prodId);
+    if (!product) {
+      return await this.updateOneById(id, { $push: { products: { product: prodId, quantity: quantity } } });
+    }
+
+    product.quantity = quantity;
+    await cart.save();
+    return cart;
   }
 }
 
