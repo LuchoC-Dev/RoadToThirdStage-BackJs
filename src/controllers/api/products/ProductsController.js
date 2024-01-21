@@ -9,16 +9,16 @@ import update from './endpoints/update.js';
 
 class ProductsController {
   static get(req, res) {
+    const { limit, page, sort, query } = req.query;
+    if (limit || page || sort || query) {
+      getByConditions(req, res);
+      return;
+    }
     getAll(req, res);
   }
 
   static getById(req, res) {
-    const { id } = req.params;
-    if (id) {
-      getById(req, res);
-      return;
-    }
-    getByConditions(req, res);
+    getById(req, res);
   }
 
   static post(req, res) {

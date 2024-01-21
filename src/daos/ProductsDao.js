@@ -16,7 +16,11 @@ class ProductsDao extends Dao {
   }
 
   async getByConditions(limit, page, sort, query) {
-    unimplements('getByConditions');
+    return await this.model.paginate(query, {
+      limit: limit ?? 10,
+      page: page ?? 1,
+      sort: { price: 'asc' === sort ? 1 : -1 },
+    });
   }
 
   async updateOneById(id, updates) {
