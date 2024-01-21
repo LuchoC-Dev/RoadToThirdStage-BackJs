@@ -1,4 +1,5 @@
 import { CartsDao } from './CartsDao.js';
+import mongoose, { ObjectId } from 'mongoose';
 
 class CartsProductsDao extends CartsDao {
   constructor() {
@@ -37,6 +38,10 @@ class CartsProductsDao extends CartsDao {
     product.quantity = quantity;
     await cart.save();
     return cart;
+  }
+
+  async removeById(id, prodId) {
+    return await this.updateOneById(id, { $pull: { products: { product: prodId } } });
   }
 }
 
