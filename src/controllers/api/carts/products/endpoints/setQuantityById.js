@@ -1,10 +1,11 @@
-import Response from '../../../../class/Response.js';
+import Response from '../../../../../class/Response.js';
 import { cartsProductsDao as Dao } from '../../../../../daos/CartsProductsDao.js';
 
-async function addById(req, res) {
+async function setQuantityById(req, res) {
   try {
     const { id, prodId } = req.params;
-    const result = await Dao.addById(id, prodId);
+    const { quantity } = req.query;
+    const result = await Dao.setQuantityById(id, prodId, quantity);
     res.status(200).json(Response.ok(result));
   } catch (error) {
     console.error(error);
@@ -12,4 +13,4 @@ async function addById(req, res) {
   }
 }
 
-export default addById;
+export default setQuantityById;
